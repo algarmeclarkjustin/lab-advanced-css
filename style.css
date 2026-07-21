@@ -11,12 +11,16 @@ body{
     color:#222;
 }
 
-/* NAVBAR */
+/* ===========================
+   NAVBAR
+=========================== */
 
 .navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
     margin-bottom:35px;
 }
 
@@ -40,6 +44,7 @@ body{
 .nav-links{
     display:flex;
     gap:12px;
+    flex-wrap:wrap;
 }
 
 .nav-links a{
@@ -57,7 +62,9 @@ body{
     color:white;
 }
 
-/* HERO */
+/* ===========================
+   HERO
+=========================== */
 
 .hero article:first-child{
     background:linear-gradient(120deg,#111827,#243B63);
@@ -78,6 +85,7 @@ body{
 
 .hero article:first-child p{
     color:#d7d7d7;
+    line-height:1.6;
 }
 
 .hero article:first-child button{
@@ -88,9 +96,16 @@ body{
     background:#2563eb;
     color:white;
     cursor:pointer;
+    transition:.3s;
 }
 
-/* FILTER */
+.hero article:first-child button:hover{
+    background:#1d4ed8;
+}
+
+/* ===========================
+   FILTER
+=========================== */
 
 .hero article:nth-child(2){
     margin-top:45px;
@@ -102,6 +117,7 @@ body{
 
 .hero article:nth-child(2) div{
     display:flex;
+    flex-wrap:wrap;
     gap:10px;
 }
 
@@ -111,6 +127,7 @@ body{
     padding:10px 22px;
     border-radius:25px;
     cursor:pointer;
+    transition:.3s;
 }
 
 .hero article:nth-child(2) button:hover{
@@ -118,7 +135,9 @@ body{
     color:white;
 }
 
-/* FEATURED */
+/* ===========================
+   FEATURED PRODUCTS
+=========================== */
 
 .hero article:nth-child(3){
     margin-top:45px;
@@ -128,15 +147,19 @@ body{
     margin-bottom:20px;
 }
 
-/* GRID */
+/* ===========================
+   PRODUCT GRID
+=========================== */
 
 .products{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:25px;
 }
 
-/* CARD */
+/* ===========================
+   PRODUCT CARD
+=========================== */
 
 .product-card{
     background:white;
@@ -152,8 +175,11 @@ body{
 
 .product-card img{
     width:100%;
-    height:180px;
-    object-fit:cover;
+    aspect-ratio:1/1;
+    object-fit:contain;
+    object-position:center;
+    background:#f8f8f8;
+    padding:15px;
 }
 
 .card-body{
@@ -168,17 +194,20 @@ body{
     color:#666;
     font-size:14px;
     margin-bottom:15px;
+    line-height:1.5;
 }
 
 .price{
     color:#2563eb;
     font-weight:bold;
-    font-size:22px;
+    font-size:24px;
+    margin-bottom:10px;
 }
 
 .star{
     color:orange;
-    margin:12px 0;
+    margin-bottom:15px;
+    font-size:18px;
 }
 
 .product-card button{
@@ -189,16 +218,102 @@ body{
     background:#2563eb;
     color:white;
     cursor:pointer;
+    transition:.3s;
 }
 
 .product-card button:hover{
     background:#1d4ed8;
 }
 
-/* FOOTER */
+/* ===========================
+   FOOTER
+=========================== */
 
 footer{
     margin-top:40px;
+    padding:20px 0;
     text-align:center;
     color:#777;
+    border-top:1px solid #ddd;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:768px){
+
+    body{
+        padding:20px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .hero article:first-child{
+        padding:35px;
+    }
+
+    .hero-title{
+        font-size:36px;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:480px){
+
+    body{
+        padding:15px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .logo{
+        flex-direction:column;
+    }
+
+    .nav-links{
+        width:100%;
+        justify-content:center;
+    }
+
+    .hero article:first-child{
+        padding:25px;
+    }
+
+    .hero-title{
+        font-size:28px;
+    }
+
+    .hero article:nth-child(2) div{
+        justify-content:center;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .product-card img{
+        aspect-ratio:1/1;
+        padding:20px;
+    }
+
+    footer{
+        font-size:14px;
+    }
+
 }

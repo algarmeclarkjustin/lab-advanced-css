@@ -72,153 +72,266 @@ body {
     color: white;
 }
 
+.hero {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 35px;
+    border-radius: 36px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
 .hero article:first-child {
     background: linear-gradient(120deg, #111827, #243b63);
     color: white;
-    padding: 55px;
-    border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    padding: 50px;
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
     text-align: center;
+    max-width: 640px;
+    margin: 0 auto 35px;
 }
 
 .hero-title {
     font-size: 48px;
-    margin-bottom: 15px;
-    line-height: 1.1;
-    text-align: center;
+    margin-bottom: 18px;
+    line-height: 1.05;
 }
 
 .hero-title span {
-    color: var(--accent);
+    color: #ffd166;
 }
 
 .hero article:first-child p {
-    color: #d7d7d7;
-    line-height: 1.6;
-    max-width: 650px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 .hero article:first-child button {
-    margin-top: 25px;
-    padding: 13px 28px;
+    margin-top: 30px;
+    padding: 15px 36px;
     border: none;
-    border-radius: 30px;
-    background: var(--primary);
+    border-radius: 999px;
+    background: #22c55e;
     color: white;
     cursor: pointer;
     transition: 0.3s ease;
+    font-weight: 700;
 }
 
 .hero article:first-child button:hover {
-    background: var(--primary-dark);
+    background: #16a34a;
 }
 
 .hero article:nth-child(2) {
-    margin-top: 45px;
+    margin-top: 0;
+    background: #f8fbff;
+    border-radius: 28px;
+    padding: 28px 30px;
+    border: 1px solid rgba(37, 99, 235, 0.12);
 }
 
 .hero article:nth-child(2) h2 {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    font-size: 20px;
 }
 
 .hero article:nth-child(2) div {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
 }
 
 .hero article:nth-child(2) button {
     border: none;
-    background: #dde6fb;
-    padding: 10px 22px;
-    border-radius: 25px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 12px 24px;
+    border-radius: 999px;
     cursor: pointer;
     transition: 0.3s ease;
+    font-weight: 600;
 }
 
 .hero article:nth-child(2) button:hover {
-    background: var(--primary);
-    color: white;
+    background: #dbeafe;
 }
 
 .hero article:nth-child(3) {
-    margin-top: 45px;
+    margin-top: 35px;
 }
 
 .hero article:nth-child(3) h2 {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    font-size: 28px;
 }
 
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 24px;
 }
 
 .product-card {
-    background: var(--surface);
-    border-radius: 18px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 28px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease;
-    border: 1px solid var(--border);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    transition: 0.35s ease;
+    border: 1px solid rgba(148, 163, 184, 0.18);
 }
 
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
+    box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12);
+}
+
+.product-card:nth-child(1) {
+    border-style: dashed;
+    border-color: rgba(248, 113, 113, 0.4);
+}
+
+.product-card::before,
+.product-card::after {
+    position: absolute;
+    z-index: 2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.product-card::before {
+    top: 18px;
+    left: 18px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(248, 113, 113, 0.12);
+    color: #b91c1c;
+    content: "";
+}
+
+.product-card:nth-child(1)::before {
+    content: "Sale";
+}
+
+.product-card:nth-child(4)::before {
+    content: "Low Stock";
+    background: rgba(245, 158, 11, 0.12);
+    color: #92400e;
+}
+
+.product-card::after {
+    top: 18px;
+    right: 18px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    color: #334155;
+}
+
+.product-card:nth-child(1)::after {
+    content: "Laptop";
+}
+
+.product-card:nth-child(2)::after {
+    content: "Headset";
+}
+
+.product-card:nth-child(3)::after {
+    content: "Mouse";
+}
+
+.product-card:nth-child(4)::after {
+    content: "Keyboard";
 }
 
 .product-card img {
     width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
+    height: 180px;
+    object-fit: cover;
     object-position: center;
-    background: #f8f8f8;
-    padding: 15px;
+    background: #eef6ff;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .card-body {
-    padding: 18px;
+    padding: 24px;
 }
 
 .card-body h3 {
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .card-body p {
-    color: var(--muted);
+    color: #64748b;
     font-size: 14px;
-    margin-bottom: 15px;
-    line-height: 1.5;
+    margin-bottom: 18px;
+    line-height: 1.6;
 }
 
 .price {
-    color: var(--primary);
-    font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 10px;
+    color: #2563eb;
+    font-weight: 800;
+    font-size: 22px;
+    margin-bottom: 12px;
 }
 
 .star {
-    color: orange;
-    margin-bottom: 15px;
-    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #f59e0b;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.product-card:nth-child(1) .star::after {
+    content: "(4.5)";
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-card:nth-child(2) .star::after {
+    content: "(4.8)";
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-card:nth-child(3) .star::after {
+    content: "(4.2)";
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-card:nth-child(4) .star::after {
+    content: "(4.0)";
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .product-card button {
     width: 100%;
     border: none;
-    padding: 13px;
-    border-radius: 10px;
-    background: var(--primary);
-    color: white;
+    padding: 15px 0;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #2563eb;
+    font-weight: 700;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 .product-card button:hover {
-    background: var(--primary-dark);
+    background: #dbeafe;
 }
 
 footer {

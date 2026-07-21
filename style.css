@@ -18,7 +18,8 @@
 
 body {
     background: linear-gradient(180deg, var(--bg) 0%, #f8fbff 100%);
-    padding: 30px;
+    padding: 0;
+    margin: 0;
     color: var(--text);
 }
 
@@ -74,7 +75,7 @@ body {
 
 .hero {
     max-width: 1180px;
-    margin: 0 auto;
+    margin: 0;
     padding: 35px;
     border-radius: 36px;
     background: rgba(255, 255, 255, 0.9);
@@ -82,16 +83,15 @@ body {
     border: 1px solid rgba(148, 163, 184, 0.18);
 }
 
-.hero article:first-child p{
+.hero article:first-child {
     background: linear-gradient(120deg, #111827, #243b63);
     color: white;
     padding: 50px;
     border-radius: 28px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
-    text-align: center;
-    max-width: 640px;
-    margin: 0 auto 35px;
-    text-align: center;
+    text-align: left;
+    width: 100%;
+    margin: 0 0 35px;
 }
 
 .hero-title {
@@ -107,8 +107,8 @@ body {
 .hero article:first-child p {
     color: #cbd5e1;
     line-height: 1.7;
-    max-width: 640px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
 }
 
 .hero article:first-child button {

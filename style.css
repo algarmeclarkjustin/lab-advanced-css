@@ -156,7 +156,8 @@ body {
 }
 
 .hero article:nth-child(2) button:hover {
-    background: #dbeafe;
+    background: var(--primary);
+    color: white;
 }
 
 .hero article:nth-child(3) {

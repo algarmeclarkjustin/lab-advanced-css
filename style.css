@@ -118,10 +118,7 @@ body {
     cursor: pointer;
     transition: 0.3s ease;
     font-weight: 700;
-}
-
-.hero article:first-child button:active {
-    animation: buttonZoom 0.6s ease-in-out;
+    animation: buttonZoom 1s ease-in-out infinite;
 }
 
 .hero article:first-child button:hover {

@@ -79,7 +79,7 @@ body {
     padding: 0 20px;
 }
 
-.hero article:first-child {
+.hero-banner {
     background: linear-gradient(120deg, #111827, #243b63);
     color: white;
     padding: 50px;
@@ -101,14 +101,14 @@ body {
     color: #ffd166;
 }
 
-.hero article:first-child p {
+.hero-banner p {
     color: #cbd5e1;
     line-height: 1.7;
     max-width: 100%;
     margin: 0;
 }
 
-.hero article:first-child button {
+.hero-banner button {
     margin-top: 30px;
     padding: 15px 36px;
     border: none;
@@ -121,11 +121,11 @@ body {
     animation: buttonZoom 1s ease-in-out infinite;
 }
 
-.hero article:first-child button:hover {
+.hero-banner button:hover {
     background: #16a34a;
 }
 
-.hero article:nth-child(2) {
+.hero-filter {
     margin-top: 0;
     background: transparent;
     border-radius: 0;
@@ -133,18 +133,18 @@ body {
     border: none;
 }
 
-.hero article:nth-child(2) h2 {
+.hero-filter h2 {
     margin-bottom: 18px;
     font-size: 20px;
 }
 
-.hero article:nth-child(2) div {
+.hero-filter div {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
 
-.hero article:nth-child(2) button {
+.hero-filter button {
     border: none;
     background: #eff6ff;
     color: #1d4ed8;
@@ -155,16 +155,16 @@ body {
     font-weight: 600;
 }
 
-.hero article:nth-child(2) button:hover {
+.hero-filter button:hover {
     background: var(--primary);
     color: white;
 }
 
-.hero article:nth-child(3) {
+.hero-featured {
     margin-top: 35px;
 }
 
-.hero article:nth-child(3) h2 {
+.hero-featured h2 {
     margin-bottom: 24px;
     font-size: 28px;
 }
@@ -314,28 +314,28 @@ body {
     font-size: 16px;
 }
 
-.product-card:nth-child(1) .star::after {
+.product-1 .star::after {
     content: "(4.5)";
     color: #64748b;
     font-size: 14px;
     font-weight: 600;
 }
 
-.product-card:nth-child(2) .star::after {
+.product-2 .star::after {
     content: "(4.8)";
     color: #64748b;
     font-size: 14px;
     font-weight: 600;
 }
 
-.product-card:nth-child(3) .star::after {
+.product-3 .star::after {
     content: "(4.2)";
     color: #64748b;
     font-size: 14px;
     font-weight: 600;
 }
 
-.product-card:nth-child(4) .star::after {
+.product-4 .star::after {
     content: "(4.0)";
     color: #64748b;
     font-size: 14px;
@@ -388,7 +388,7 @@ footer {
         align-items: flex-start;
     }
 
-    .hero article:first-child {
+    .hero-banner {
         padding: 35px;
     }
 
@@ -421,7 +421,7 @@ footer {
         justify-content: center;
     }
 
-    .hero article:first-child {
+    .hero-banner {
         padding: 25px;
     }
 
@@ -429,7 +429,7 @@ footer {
         font-size: 28px;
     }
 
-    .hero article:nth-child(2) div {
+    .hero-filter div {
         justify-content: center;
     }
 

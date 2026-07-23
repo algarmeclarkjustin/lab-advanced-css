@@ -120,6 +120,10 @@ body {
     font-weight: 700;
 }
 
+.hero article:first-child button:active {
+    animation: buttonZoom 0.6s ease-in-out;
+}
+
 .hero article:first-child button:hover {
     background: #16a34a;
 }
@@ -362,6 +366,18 @@ footer {
     text-align: center;
     color: #777;
     border-top: 1px solid #ddd;
+}
+
+@keyframes buttonZoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 768px) {
